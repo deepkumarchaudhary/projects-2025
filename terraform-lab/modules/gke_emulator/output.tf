@@ -1,3 +1,3 @@
-output "kubeconfig_path" {  
-  value = abspath("kubeconfigs/${var.cluster_name}.yaml")  
-}  
+output "kubeconfig_path" {
+  value = local_file.kubeconfig.filename
+}

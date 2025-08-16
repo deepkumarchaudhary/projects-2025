@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"gcs_bucket","Source":"./modules/gcs_emulator","Dir":"modules/gcs_emulator"},{"Key":"gke_cluster","Source":"./modules/gke_emulator","Dir":"modules/gke_emulator"}]}

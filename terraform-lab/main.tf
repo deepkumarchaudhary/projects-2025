@@ -1,21 +1,5 @@
-# main.tf
-module "gcs_bucket" {
-  source       = "./modules/gcs_emulator"
-  bucket_name  = "test-bucket-${random_pet.suffix.id}"
-  external_port = 4443
-}
-
 module "gke_cluster" {
-  source      = "./modules/gke_emulator"
-  cluster_name = "test-cluster-${random_pet.suffix.id}"
-}
-
-resource "random_pet" "suffix" {
-  length = 1
-}
-
-output "gcs_endpoint" {
-  value = module.gcs_bucket.endpoint
+  source = "./modules/minikube_gke"
 }
 
 output "gke_kubeconfig" {
